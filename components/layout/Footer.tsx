@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-white border-t border-gray-100">
+        <footer className="w-full bg-light-cafe border-t border-gray-100">
 
             {/* --- ВЕРХНЯЯ ЧАСТЬ: КОНТАКТЫ И КАРТА (Как на скринах) --- */}
             <div className="max-w-4xl mx-auto py-16 px-4 text-center">

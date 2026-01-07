@@ -9,12 +9,11 @@ interface MenuProps {
 
 const navItems = [
     { name: 'Startseite', href: '/' },
-    { name: 'Menü', href: '/menu' },
-    { name: 'Veranstaltungen', href: '/events' },
-    { name: 'Über uns', href: '/about-us' },
-    { name: 'Kontakt', href: '/contact' },
+    { name: 'Über uns', href: '/#about' }, // Скролл к id="about"
+    { name: 'Speisekarte', href: '/#menu' }, // Скролл к id="menu"
+    { name: 'Feiern & Anlässe', href: '/#events' }, // Скролл к id="events"
+    { name: 'Kontakt', href: '/#contact' }, // Скролл к id="contact"
 ];
-
 export default function MobileMenu({ isOpen, onClose }: MenuProps) {
     if (!isOpen) return null;
 
@@ -50,13 +49,13 @@ export default function MobileMenu({ isOpen, onClose }: MenuProps) {
                     <ul className="pt-10 px-8 space-y-5">
                         {navItems.map((item) => (
                             <li key={item.name}>
-                                <NavLink
+                                <Link
                                     href={item.href}
-                                    onClick={onClose}
-                                    className="text-2xl" // Для мобилки задаем крупный шрифт
+                                    onClick={onClose} // Обязательно закрываем меню
+                                    className="text-2xl text-white font-light tracking-wide hover:text-amber-300 transition-colors"
                                 >
                                     {item.name}
-                                </NavLink>
+                                </Link>
                             </li>
                         ))}
                     </ul>

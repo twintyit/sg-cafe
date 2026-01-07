@@ -28,7 +28,7 @@ export default function RootLayoutWrapper({ children }: { children: React.ReactN
             <Header />
 
             {/* Main tag с flex-grow, как у тебя было */}
-            <main className="grow pt-16">
+            <main className="grow bg-light-cafe">
                 {children}
             </main>
 

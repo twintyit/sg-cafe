@@ -4,10 +4,10 @@ import NavLink from '../NavLink'; // Импортируем наш универ�
 
 const navItems = [
     { name: 'Startseite', href: '/' },
-    { name: 'Menü', href: '/menu' },
-    { name: 'Veranstaltungen', href: '/events' },
-    { name: 'Über uns', href: '/about-us' },
-    { name: 'Kontakt', href: '/contact' },
+    { name: 'Speisekarte', href: '/#menu' }, // Скролл к id="menu"
+    { name: 'Feiern & Anlässe', href: '/#events' }, // Скролл к id="events"
+    { name: 'Über uns', href: '/#about' }, // Скролл к id="about"
+    { name: 'Kontakt', href: '/#contact' }, // Скролл к id="contact"
 ];
 
 export default function DesktopNav() {

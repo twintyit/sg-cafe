@@ -31,11 +31,11 @@ export default function Header() {
 
         // 2. Чуть опустил (до 200px) -> Полупрозрачный
         if (scrollPos > 0 && scrollPos < 200) {
-            return 'bg-white/80 backdrop-blur-md shadow-sm';
+            return 'bg-primary-cafe-tr backdrop-blur-md shadow-sm';
         }
 
         // 3. Низ -> Белый
-        return 'bg-white shadow-md';
+        return 'bg-primary-cafe shadow-md';
     };
 
     return (
@@ -52,13 +52,13 @@ export default function Header() {
                         <Image
                             src="/icons/logo.png"
                             alt="SG Gaststätte Logo"
-                            width={100}
+                            width={70}
                             height={40}
                             priority
-                            className="object-contain"
+                            className="object-contain brightness-95" 
                         />
 
-                        <span className="text-xl font-extrabold text-accent-cafe">
+                        <span className="text-xl  text-white">
                             SG Gaststätte
                         </span>
                     </Link>
@@ -68,7 +68,7 @@ export default function Header() {
 
                     {/* МОБИЛЬНАЯ КНОПКА-ГАМБУРГЕР */}
                     <button
-                        className="md:hidden p-2 text-accent-cafe hover:opacity-70"
+                        className="md:hidden p-2 text-white hover:opacity-70"
                         onClick={() => setIsMenuOpen(true)}
                         aria-label="Открыть меню"
                     >
